@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汇智任务管理系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部导航栏 -->
+        <header>
+            <div class="logo">
+                <img src="home-icon.png" alt="Home">
+                <h1>汇智任务管理</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">设定</a>
+                        <ul class="dropdown">
+                            <li><a href="#">系统设定</a></li>
+                            <li><a href="#">应用设定</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">用户</a>
+                        <ul class="dropdown">
+                            <li><a href="#">提交申请</a></li>
+                            <li><a href="#">考勤记录</a></li>
+                            <li><a href="#">个人资料</a></li>
+                            <li><a href="#">密码修改</a></li>
+                            <li><a href="#">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 侧边栏 -->
+        <aside>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#">信息</a>
+                    <ul class="submenu">
+                        <li><a href="#">个人</a></li>
+                        <li><a href="#">部门</a></li>
+                        <li><a href="#">企业</a></li>
+                        <li><a href="#">群组</a></li>
+                        <li><a href="#">业内</a></li>
+                        <li><a href="#">市场</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">部门任务</a>
+                    <ul class="submenu">
+                        <li><a href="#">总务部</a></li>
+                        <li><a href="#">人事部</a></li>
+                        <li><a href="#">采购部</a></li>
+                        <li><a href="#">业务部</a></li>
+                        <li><a href="#">物管部</a></li>
+                        <li><a href="#">任务管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">考勤</a>
+                    <ul class="submenu">
+                        <li><a href="#">查询/打印</a></li>
+                        <li><a href="#">考勤管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">文件</a>
+                    <ul class="submenu">
+                        <li><a href="#">查询/打印</a></li>
+                        <li><a href="#">文件管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">联络人</a>
+                    <ul class="submenu">
+                        <li><a href="#">内部人员</a></li>
+                        <li><a href="#">外判商</a></li>
+                        <li><a href="#">业务往来人员</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">日历</a>
+                    <ul class="submenu">
+                        <li><a href="#">我的日历</a></li>
+                        <li><a href="#">同事日历</a></li>
+                        <li><a href="#">部门日历</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">教学</a></li>
+            </ul>
+        </aside>
+
+        <!-- 内容区域 -->
+        <main>
+            <div class="content-header">
+                <h2 id="content-title">信息</h2>
+            </div>
+            <div class="content-wrapper">
+                <div class="left-content">
+                    <div class="task-list">
+                        <div class="task-list-header">
+                            <div>选择</div>
+                            <div>预计完成日期</div>
+                            <div>任务标题</div>
+                            <div>发起人</div>
+                            <div>状态</div>
+                            <div>进度</div>
+                        </div>
+                        <div class="task-list-body">
+                            <div class="task-item">
+                                <div><input type="checkbox"></div>
+                                <div>2025-01-25</div>
+                                <div>任务1</div>
+                                <div>张三</div>
+                                <div>进行中</div>
+                                <div>50%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resize-handle"></div>
+                <div class="right-content">
+                    <div class="task-detail">
+                        <h3>任务详细说明</h3>
+                        <p>这里是任务的详细说明内容...</p>
+                    </div>
+                    <div class="task-notes">
+                        <textarea placeholder="输入备注..."></textarea>
+                    </div>
+                    <div class="task-actions">
+                        <button>开始</button>
+                        <button>更新</button>
+                        <button>完成</button>
+                        <button>转移</button>
+                        <button>取消</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

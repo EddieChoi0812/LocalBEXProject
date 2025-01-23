@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #e8f0fe;
+    --text-color: #202124;
+    --white: #ffffff;
+    --border-color: #dadce0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+/* 顶部导航栏 */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 24px;
+    width: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown li {
+    padding: 8px 16px;
+}
+
+.dropdown a {
+    color: var(--text-color);
+}
+
+nav li:hover .dropdown {
+    display: block;
+}
+
+/* 侧边栏 */
+aside {
+    background-color: var(--secondary-color);
+    width: 240px;
+    padding: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.sidebar-menu li:hover .submenu {
+    display: block;
+}
+
+/* 内容区域 */
+main {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+aside {
+    width: 240px;
+    flex: 0 0 auto;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    flex: 0 0 auto;
+}
+
+.content-body {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    overflow: auto;
+}
